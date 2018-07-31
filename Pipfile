@@ -5,6 +5,9 @@ name = "pypi"
 
 [packages]
 flask = "*"
+requests = "*"
+ics = "*"
+pyyaml = "*"
 
 [dev-packages]
 

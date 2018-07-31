@@ -1,1 +1,1 @@
-web: CALENDONATOR_SETTINGS=settings.cfg gunicorn calendonator:app
+web: CALENDONATOR_SETTINGS=../settings.cfg gunicorn calendonator:app

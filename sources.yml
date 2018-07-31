@@ -1,0 +1,9 @@
+---
+webcal_url: webcal://www.meetup.com/pl-PL/hs3city/events/ical
+ics_url: http://api.meetup.com/hs3city/upcoming.ical
+---
+webcal_url: webcal://www.meetup.com/pl-PL/Elixir-Tricity/events/ical
+ics_url: http://api.meetup.com/Elixir-Tricity/upcoming.ical
+---
+webcal_url: webcal://www.meetup.com/pl-PL/PyGda-pl/events/ical
+ics_url: http://api.meetup.com/PyGda-pl/upcoming.ical

@@ -6,8 +6,8 @@ clean:
 venv:
 	virtualenv --python=python3 venv && venv/bin/python setup.py develop
 
-run: venv
-	FLASK_APP=calendonator CALENDONATOR_SETTINGS=../settings.cfg venv/bin/flask run
+run:
+	FLASK_APP=calendonator CALENDONATOR_SETTINGS=../settings.cfg pipenv run flask run
 
 test: venv
 	CALENDONATOR_SETTINGS=../settings.cfg venv/bin/python -m unittest discover -s tests

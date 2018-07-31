@@ -1,0 +1,2 @@
+recursive-include calendonator/templates *
+recursive-include calendonator/static *

@@ -9,6 +9,7 @@ requests = "*"
 ics = "*"
 pyyaml = "*"
 glom = "*"
+gunicorn = "*"
 
 [dev-packages]
 

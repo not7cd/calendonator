@@ -1,1 +1,1 @@
-web: FLASK_APP=calendonator CALENDONATOR_SETTINGS=../settings.cfg flask run
+web: CALENDONATOR_SETTINGS=settings.cfg gunicorn calendonator:app

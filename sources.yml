@@ -7,5 +7,5 @@ ics_url: http://api.meetup.com/Elixir-Tricity/upcoming.ical
 ---
 webcal_url: webcal://www.meetup.com/pl-PL/PyGda-pl/events/ical
 ics_url: http://api.meetup.com/PyGda-pl/upcoming.ical
----
-ics_url: https://calendar.google.com/calendar/ical/8s96dmhr9qv1akadn3b2el9kk8%40group.calendar.google.com/public/basic.ics
+# ---
+# ics_url: https://calendar.google.com/calendar/ical/8s96dmhr9qv1akadn3b2el9kk8%40group.calendar.google.com/public/basic.ics

@@ -14,7 +14,6 @@ def get_aggregated_ical(sources):
 	aggregated_calendar = ics.Calendar()
 	for ics_url in glom(sources, ["ics_url"]):
 		minor_calendar = ics.Calendar(requests.get(ics_url).text)
-		for event in minor_calendar.events:
-			aggregated_calendar.events.add(event)
+		aggregated_calendar.events.update(minor_calendar.events)
 
 	return aggregated_calendar

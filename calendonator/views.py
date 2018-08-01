@@ -2,6 +2,7 @@ from flask import render_template
 
 from calendonator import app
 from calendonator.calendars import *
+import arrow
 
 
 def get_calendar():
@@ -11,7 +12,9 @@ def get_calendar():
 @app.route('/')
 def index():
     app.logger.warning('sample message')
-    return render_template('index.html', events=get_calendar().events)
+    timeline = ics.timeline.Timeline(get_calendar())
+    now = arrow.now()
+    return render_template('index.html', events=timeline.start_after(now))
 
 @app.route('/upcoming.ical')
 def aggregated_calendar():

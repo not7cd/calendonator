@@ -6,11 +6,24 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
   </head>
   <body>
+    <h1>
     Welcome to calendonator
+    </h1>
 
     {% for event in events %}
 	    <hr>
-    	{{ event }}
+      <h2>
+    	{{ event.name }}
+      </h2>
+      <span>
+        <b>
+    	{{ event.begin.humanize() }}
+        </b>
+      </span>
+      <section>
+        {{ event.description }}
+      </section>
+
     {% endfor %}
 
   </body>

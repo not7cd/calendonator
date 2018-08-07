@@ -1,9 +1,17 @@
 import os
 from flask import Flask
+from flask_common import Common
 
 app = Flask(__name__)
+common = Common(app)
+
+# TODO: better config
 app.config.from_object("calendonator.default_settings")
 app.config.from_envvar("CALENDONATOR_SETTINGS")
+
+__version__ = "0.0.2"
+app.config["VERSION"] = __version__
+
 
 if not app.debug:
     import logging

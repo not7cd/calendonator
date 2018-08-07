@@ -5,11 +5,11 @@
         <div class="container">
             <nav class="nav">
                 <a class="nav-link text-light" href="//hs3.pl">home</a>
-                <a class="nav-link text-light" href="//wiki.hs3.pl/projekty/whois">wiki</a>
-                <a class="nav-link text-light" href="//github.com/hs3city/whois">repo</a>
+                <a class="nav-link text-light" href="{{ config['APP_NAME'] }}">wiki</a>
+                <a class="nav-link text-light" href="{{ config['APP_REPO'] }}">repo</a>
             </nav>
             <nav class="nav justify-content-end">
-                <a class="nav-link disabled" href="#">{{ version }}</a>
+                <a class="nav-link disabled" href="#">{{ config['VERSION'] }}</a>
             </nav>
         </div>
     </nav>

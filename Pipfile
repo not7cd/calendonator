@@ -10,6 +10,7 @@ ics = "*"
 pyyaml = "*"
 glom = "*"
 gunicorn = "*"
+flask-common = "*"
 
 [dev-packages]
 

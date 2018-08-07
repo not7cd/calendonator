@@ -1,22 +1,23 @@
 from flask import render_template, json
 
-from calendonator import app
+from calendonator import app, common
 from calendonator.calendars import *
 import arrow
 from glom import glom
 
-
+@common.cache.memoize(120)
 def get_calendar():
     event_sources = get_event_sources()
     return get_aggregated_ical(event_sources)
 
 
 @app.route("/")
+@common.cache.cached(50)
 def index():
     app.logger.warning("sample message")
     timeline = ics.timeline.Timeline(get_calendar())
     now = arrow.now()
-    return render_template("index.html", events=timeline.start_after(now))
+    return render_template("index.html", events=timeline.start_after(now), config=app.config)
 
 
 @app.route("/upcoming.ical")

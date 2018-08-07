@@ -7,13 +7,22 @@
 
     <ul class="list-unstyled">
     {% for event in events %}
-    <li class="media">
-      <i class="mr-3 far fa-calendar fa-3x"></i>
-      <div class="media-body">
-        <h5 class="mt-0">{{ event.name }}</h5>
-        <h6 class="mt-0">{{ event.begin.humanize() }}</h6>
-        {{ event.description }}
+    <li>
+      
+    <div class="card mb-2">
+      <div class="media card-body">
+        
+        <i class="mr-3 far fa-calendar fa-3x d-none d-md-inline"></i>
+        <div class="media-body">
+          <h5 class="mt-0">{{ event.name }}</h5>
+          <h6 class="mt-0">{{ event.begin.humanize(locale=config['LOCALE']) }}</h6>
+          <p>{{ event.description }}</p>
+        </div>
       </div>
+      <div class="card-footer">
+      {{ event.begin.format(fmt='YYYY-MM-DD HH:mm:ssZZ', locale=config['LOCALE']) }}
+    </div>
+    </div>
     </li>
     {% endfor %}
   </ul>

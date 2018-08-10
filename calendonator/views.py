@@ -5,7 +5,7 @@ from calendonator.calendars import *
 import arrow
 from glom import glom
 
-@common.cache.memoize(120)
+# @common.cache.memoize(120)
 def get_calendar():
     event_sources = get_event_sources()
     return get_aggregated_ical(event_sources)

@@ -3,9 +3,12 @@ import ics
 import requests
 import arrow
 
+OLD_CAL = u"https://calendar.google.com/calendar/ical/8s96dmhr9qv1akadn3b2el9kk8%40group.calendar.google.com/public/basic.ics"
+CURRENT_CAL = u"https://calendar.google.com/calendar/ical/codeme.pl_ksn59c5sr9fn3bd78lh7vj07pg%40group.calendar.google.com/public/basic.ics"
+
 calendar = ics.Calendar(
     requests.get(
-        u"https://calendar.google.com/calendar/ical/8s96dmhr9qv1akadn3b2el9kk8%40group.calendar.google.com/public/basic.ics"
+        CURRENT_CAL
     ).text
 )
 
